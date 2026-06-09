@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automotive Technician Aptitude Test</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; color: #222; }
+header { background:#1d1d1d; color:white; padding:18px; }
+main { max-width: 1000px; margin:auto; padding:18px; }
+.card { background:white; border-radius:12px; padding:18px; margin:14px 0; box-shadow:0 2px 8px rgba(0,0,0,.08); }
+h1,h2,h3 { margin-top:0; }
+button { background:#1f5f8b; color:white; border:0; border-radius:8px; padding:12px 16px; font-size:16px; margin:6px 4px; cursor:pointer; }
+button.secondary { background:#555; }
+button.danger { background:#a83232; }
+input, textarea { width:100%; padding:10px; margin:6px 0 12px; border:1px solid #bbb; border-radius:8px; font-size:16px; box-sizing:border-box; }
+label.option { display:block; padding:10px; margin:6px 0; background:#f7f7f7; border-radius:8px; border:1px solid #ddd; }
+.small { color:#666; font-size:14px; }
+.hidden { display:none; }
+.ref { line-height:1.45; font-size:15px; }
+.progress { background:#ddd; border-radius:99px; overflow:hidden; height:18px; margin:8px 0; }
+.bar { background:#1f5f8b; height:18px; color:white; text-align:right; padding-right:6px; font-size:12px; line-height:18px; min-width:2em; }
+table { width:100%; border-collapse: collapse; background:white; }
+th,td { padding:10px; border-bottom:1px solid #ddd; text-align:left; vertical-align:top; }
+@media print { button, .no-print { display:none; } body { background:white; } .card { box-shadow:none; border:1px solid #ddd; } }
+</style>
+</head>
+<body>
+<header>
+<h1>Automotive Technician Aptitude Test</h1>
+<div>Focus: 1960s–2000 era mechanical, electrical, brakes, cooling, and diagnostic comprehension</div>
+</header>
+<main>
+<div class="card no-print">
+<button onclick="showSection('applicant')">Applicant Test</button>
+<button onclick="showSection('adminLogin')" class="secondary">Administrator Results</button>
+<button onclick="window.print()" class="secondary">Print / Save PDF</button>
+</div>
+
+<section id="applicant">
+<div class="card">
+<h2>Applicant Information</h2>
+<label>Applicant Name<input id="name" placeholder="Full name"></label>
+<label>Date<input id="date" type="date"></label>
+<label>Phone / Email<input id="contact" placeholder="Phone or email"></label>
+<label>Relevant Experience<textarea id="experience" rows="3" placeholder="Briefly describe automotive experience, training, or specialties"></textarea></label>
+<p class="small">Instructions: Use the reference page below as needed. Choose the best answer for each question. This test is designed to measure practical comprehension, not trivia memorization.</p>
+</div>
+<div class="card ref">
+<h2>General Data & Specs Reference Page</h2>
+<br>GENERAL DATA &amp; SPECIFICATIONS PAGE — 1960s–2000 Automotive Technology<br><br>Use this page during the test. The goal is to see whether the applicant can read, apply, and reason from technical information.<br><br>Basic electrical<br>• Ohm’s Law: Volts = Amps × Ohms. Amps = Volts ÷ Ohms.<br>• A fully charged 12V battery at rest is commonly about 12.6V.<br>• Typical charging voltage on many 12V vehicles is roughly 13.5–14.7V at fast idle. Always verify vehicle-specific specs.<br>• Voltage drop testing should be done with the circuit operating under load.<br>• As a general diagnostic target, high-current circuits should have very low voltage drop. A ground-side drop around 0.8V on a headlamp circuit is suspicious and should be investigated.<br>• Corroded grounds can cause dim lights, backfeeding, false readings, no-crank conditions, and intermittent electrical faults.<br>• Relays allow a low-current control circuit to switch a higher-current load such as fans, fuel pumps, horns, and lighting.<br><br>Mechanical/engine<br>• Healthy gasoline engines commonly show about 17–21 inHg manifold vacuum at warm idle, but camshaft, altitude, tune, and engine condition matter.<br>• Low steady vacuum can suggest late ignition timing, valve timing issues, restricted exhaust, intake leaks, or poor engine condition.<br>• Compression readings should generally be reasonably even. A common rule of thumb is that cylinders should be within about 10–15% of each other, but always verify specs.<br>• Two adjacent low cylinders can suggest a head gasket leak between cylinders or another localized sealing problem.<br>• Backfire through the carburetor can be caused by incorrect firing order, ignition timing, valve timing, lean condition, or intake valve sealing issues.<br>• Torque values and tightening sequences protect parts and gaskets from distortion and uneven clamping.<br><br>Brake system<br>• Pascal’s Law: pressure applied to a confined fluid is transmitted equally through the fluid.<br>• Brake fluid is intended to transmit force hydraulically; air in the system compresses and can cause a spongy pedal.<br>• A sinking brake pedal with no external leak can suggest internal master cylinder bypass.<br>• Pulling under braking can be caused by uneven friction, hydraulic restriction, contaminated linings, seized hardware, tire/suspension issues, or side-to-side brake imbalance.<br>• Disc/drum systems may require proportioning, metering, and residual pressure control depending on the setup.<br>• Drum brakes require proper shoe adjustment and working self-adjusters to keep pedal travel correct.<br><br>Cooling system<br>• A pressure cap raises the boiling point by increasing system pressure. Many later systems use caps around 13–16 PSI, but older/custom systems vary.<br>• A 50/50 coolant/water mix commonly provides freeze protection, corrosion protection, and improved boiling protection compared with plain water.<br>• Overheating at idle often points toward airflow problems: fan, shroud, fan clutch, electric fan wiring/control, or blocked airflow.<br>• Overheating at highway speed may point toward flow or heat-transfer problems: restricted radiator, collapsing hose, water pump issue, lean mixture, ignition timing, or airflow restriction.<br>• A thermostat stuck open can cause slow warm-up and poor heater performance. A thermostat stuck closed can cause rapid overheating.<br>• Combustion gases entering the cooling system can cause rapid pressure buildup, coolant loss, bubbles, overheating, and sometimes white exhaust smoke.<br><br>Safe shop habits<br>• Verify the complaint before replacing parts.<br>• Use the correct service information for the exact year, make, model, engine, transmission, and option package.<br>• On custom builds, document modifications before diagnosis: added EFI, ignition boxes, electric fans, relays, fuses, grounds, fuel pumps, brake conversions, and cooling changes.<br>• When uncertain, test first. Parts-cannon diagnostics are expensive and hide the real cause.<br>
+</div>
+<form id="testForm" class="card">
+<h2>Test Questions</h2>
+<div id="questions"></div>
+<button type="button" onclick="submitTest()">Submit Test</button>
+</form>
+</section>
+
+<section id="adminLogin" class="hidden">
+<div class="card">
+<h2>Administrator Login</h2>
+<p class="small">Default password: <b>shopadmin1969</b>. Change ADMIN_PASSWORD inside the HTML file before using it live.</p>
+<input type="password" id="adminPass" placeholder="Admin password">
+<button onclick="adminLogin()">View Results</button>
+</div>
+</section>
+
+<section id="admin" class="hidden">
+<div class="card">
+<h2>Administrator Results Dashboard</h2>
+<button onclick="renderAdmin()">Refresh Results</button>
+<button onclick="exportCSV()" class="secondary">Export CSV</button>
+<button onclick="clearResults()" class="danger">Clear All Local Results</button>
+<p class="small">Results are stored in this browser on this device using local storage. For multi-device shop use, connect this test to Google Forms, Airtable, Jotform, or a small database-backed web app.</p>
+</div>
+<div id="adminResults"></div>
+</section>
+
+</main>
+<script>
+const ADMIN_PASSWORD = "shopadmin1969";
+const QUESTIONS = [{"cat": "Mechanical Aptitude", "q": "A V8 engine cranks normally but has low compression on two adjacent cylinders. What is the most likely first suspicion?", "opts": ["Weak battery", "Blown head gasket between cylinders", "Bad alternator diode", "Incorrect tire pressure"], "a": 1}, {"cat": "Mechanical Aptitude", "q": "A customer complains of a clunk when shifting from Reverse to Drive on a 1970s rear-wheel-drive car. Which inspection is most appropriate first?", "opts": ["Check driveshaft U-joints and engine/transmission mounts", "Replace the radiator cap", "Adjust headlight aim", "Replace spark plug wires"], "a": 0}, {"cat": "Mechanical Aptitude", "q": "Using the data page, what does low steady manifold vacuum most commonly suggest?", "opts": ["Healthy engine at idle", "Late ignition timing, valve timing issue, or restricted exhaust", "Overfilled brake master cylinder", "High tire pressure"], "a": 1}, {"cat": "Mechanical Aptitude", "q": "A pushrod engine has one rocker arm much looser than the others after adjustment was previously correct. What is a likely mechanical cause?", "opts": ["Collapsed lifter or worn cam lobe", "Bad tail light bulb", "Weak radiator cap spring", "Open speaker wire"], "a": 0}, {"cat": "Mechanical Aptitude", "q": "An engine has spark, fuel, and compression but backfires through the carburetor while cranking. What should be checked?", "opts": ["Valve timing and ignition timing/firing order", "Fuel gauge sender only", "Rear axle gear oil color only", "Washer fluid level"], "a": 0}, {"cat": "Mechanical Aptitude", "q": "Why are torque specs and tightening sequence important on cylinder heads and intake manifolds?", "opts": ["They make bolts easier to remove later", "They reduce warping and help gasket sealing", "They increase alternator output", "They reduce tire wear"], "a": 1}, {"cat": "Mechanical Aptitude", "q": "A manual transmission car grinds only when shifting into one gear, but clutch release feels normal. What is likely?", "opts": ["Bad synchronizer or gear-specific issue", "All four brakes dragging", "Battery sulfation", "Thermostat stuck open"], "a": 0}, {"cat": "Mechanical Aptitude", "q": "A driveshaft vibration increases with vehicle speed but does not change with engine RPM in neutral. Where should you focus first?", "opts": ["Driveshaft balance, U-joints, pinion angle, tires", "Carburetor idle mixture", "Ignition points gap", "Heater control valve"], "a": 0}, {"cat": "Mechanical Aptitude", "q": "A rear axle has excessive backlash. What symptom may it cause?", "opts": ["Whine/clunk on acceleration-deceleration changes", "No brake pedal at all", "No fuel pressure", "High coolant pressure only"], "a": 0}, {"cat": "Mechanical Aptitude", "q": "If a small-block V8 has one bank running much hotter than the other after intake work, what should be considered?", "opts": ["Vacuum leak or gasket sealing problem on that side", "Radio antenna resistance", "Door hinge alignment", "Battery date code"], "a": 0}, {"cat": "Automotive Electrical", "q": "Using Ohm\u2019s Law, a 12-volt circuit with 4 ohms resistance will draw approximately how much current?", "opts": ["0.33 amps", "3 amps", "16 amps", "48 amps"], "a": 1}, {"cat": "Automotive Electrical", "q": "A test light is dim on the positive side of a headlamp circuit, but battery voltage is normal at the battery. What does this suggest?", "opts": ["High resistance in the feed side", "Perfect circuit operation", "Too much coolant pressure", "Warped brake rotor"], "a": 0}, {"cat": "Automotive Electrical", "q": "A starter clicks once but does not crank. Battery tests good. What should be checked next?", "opts": ["Voltage drop at battery cables, grounds, solenoid, and starter", "Radiator cap rating only", "Carburetor choke pull-off only", "Rear shock absorber length"], "a": 0}, {"cat": "Automotive Electrical", "q": "Why is a voltage drop test often better than an ohms test on a high-current circuit?", "opts": ["It tests the circuit under load", "It requires no battery", "It only works on fuses", "It measures coolant flow"], "a": 0}, {"cat": "Automotive Electrical", "q": "An alternator charges at 15.8 volts on a 12-volt system. What is the concern?", "opts": ["Overcharging may damage battery and electronics", "This is always normal", "The starter will spin backward", "Brake fluid will boil immediately"], "a": 0}, {"cat": "Automotive Electrical", "q": "A 1960s points ignition system has burned points after short use. What should be checked?", "opts": ["Condenser and primary resistance/ballast resistor", "Radiator fan shroud", "Brake shoe arc", "Differential backlash"], "a": 0}, {"cat": "Automotive Electrical", "q": "A fuse blows immediately when installed. What is the most likely electrical fault?", "opts": ["Short to ground on the protected circuit", "Open circuit only", "Low coolant level", "Loose wheel bearing"], "a": 0}, {"cat": "Automotive Electrical", "q": "A relay clicks but the device does not operate. What should be checked?", "opts": ["Power and ground on both control and load sides", "Spark plug heat range only", "Coolant mixture only", "Wheel alignment caster"], "a": 0}, {"cat": "Automotive Electrical", "q": "Why should older cars with added electric fans or fuel pumps use relays?", "opts": ["To reduce switch load and safely carry higher current", "To raise engine compression", "To increase brake pedal travel", "To lean out the carburetor"], "a": 0}, {"cat": "Automotive Electrical", "q": "A ground wire is corroded on a tail light assembly. What symptom can result?", "opts": ["Dim lights, backfeeding, or strange light operation", "Engine mechanical knock", "Transmission gear ratio change", "Higher coolant boiling point"], "a": 0}, {"cat": "Automotive Brakes", "q": "Using the data page, what does Pascal\u2019s Law explain in a hydraulic brake system?", "opts": ["Pressure applied to confined fluid is transmitted equally", "Air always sinks in brake fluid", "Brake drums cool faster than rotors", "Voltage equals current times resistance"], "a": 0}, {"cat": "Automotive Brakes", "q": "A brake pedal slowly sinks while holding steady pressure and no external leak is visible. What is likely?", "opts": ["Internal master cylinder bypass", "Bad turn signal switch", "Clogged radiator", "Lean carburetor jetting"], "a": 0}, {"cat": "Automotive Brakes", "q": "A car pulls left during braking. Which is a reasonable first inspection?", "opts": ["Right front brake not applying or left front brake grabbing", "Alternator belt tension", "Rear axle gear ratio", "Coolant thermostat rating"], "a": 0}, {"cat": "Automotive Brakes", "q": "On a front disc/rear drum conversion, why may a proportioning valve be needed?", "opts": ["To balance front/rear brake pressure and reduce rear lockup", "To increase alternator amperage", "To lower engine vacuum", "To set ignition dwell"], "a": 0}, {"cat": "Automotive Brakes", "q": "What problem can air in the brake hydraulic system cause?", "opts": ["Spongy pedal and reduced braking", "Harder spark plug wires", "More charging voltage", "Lower engine temperature only"], "a": 0}, {"cat": "Automotive Brakes", "q": "A drum brake vehicle has excessive pedal travel after shoe replacement. What should be checked?", "opts": ["Shoe adjustment and self-adjuster operation", "Battery reserve capacity", "Carburetor float level only", "Radiator hose diameter"], "a": 0}, {"cat": "Automotive Brakes", "q": "A brake rotor has lateral runout. What symptom may it cause?", "opts": ["Pedal pulsation or steering wheel shake while braking", "No crank condition", "Engine overheating at idle", "Dim dash lights"], "a": 0}, {"cat": "Automotive Brakes", "q": "Why should contaminated brake linings generally be replaced rather than cleaned?", "opts": ["Oil/brake fluid can soak into friction material", "They become too electrically conductive", "They raise coolant pressure", "They improve grip too much"], "a": 0}, {"cat": "Automotive Brakes", "q": "A power brake booster loses assist and the pedal becomes very hard. What should be checked?", "opts": ["Vacuum supply, check valve, and booster", "Wheel paint thickness", "Alternator pulley diameter", "Antenna cable resistance"], "a": 0}, {"cat": "Automotive Brakes", "q": "What is a residual pressure valve commonly used for in drum brake circuits?", "opts": ["To maintain slight line pressure and help cup seals", "To change spark timing", "To increase coolant temperature", "To reduce battery voltage"], "a": 0}, {"cat": "Cooling System", "q": "Using the data page, why does a pressure cap raise the coolant boiling point?", "opts": ["Higher pressure raises the boiling point of the coolant mixture", "It makes the water pump spin faster", "It changes ignition timing", "It lowers engine compression"], "a": 0}, {"cat": "Cooling System", "q": "An engine overheats at idle but cools down at highway speed. What is most likely?", "opts": ["Airflow problem: fan, shroud, clutch, or electric fan operation", "Rear axle backlash", "Starter solenoid issue", "Brake master cylinder bypass"], "a": 0}, {"cat": "Cooling System", "q": "An engine overheats at highway speed but is acceptable at idle. What should be considered?", "opts": ["Restricted radiator, collapsing hose, lean mixture, timing, or water pump flow", "Blower motor resistor only", "Tail light ground only", "Parking brake cable only"], "a": 0}, {"cat": "Cooling System", "q": "A thermostat is stuck open. What is a likely symptom?", "opts": ["Slow warm-up and poor heater performance", "Immediate brake lockup", "No starter engagement", "Oil pressure doubles"], "a": 0}, {"cat": "Cooling System", "q": "A lower radiator hose collapses at higher RPM. What is likely missing or failed?", "opts": ["Internal spring/support or hose integrity", "Ignition condenser", "Brake shoe hold-down spring", "Fuel tank sender float"], "a": 0}, {"cat": "Cooling System", "q": "White smoke with coolant loss and pressure building quickly in the cooling system may indicate what?", "opts": ["Combustion leak/head gasket issue", "Weak alternator pulley", "Incorrect rear tire size", "Bad radio ground"], "a": 0}, {"cat": "Cooling System", "q": "Why is proper fan shroud depth and blade position important?", "opts": ["It improves airflow through the radiator at low speed", "It raises brake fluid boiling point", "It changes camshaft duration", "It reduces voltage drop in headlights"], "a": 0}, {"cat": "Cooling System", "q": "A 50/50 coolant mix is commonly used because it provides what?", "opts": ["Freeze protection, corrosion protection, and higher boiling point than plain water", "More horsepower directly", "Lower oil viscosity", "Higher alternator amperage"], "a": 0}, {"cat": "Cooling System", "q": "A radiator has cold spots during an overheating complaint. What does that suggest?", "opts": ["Internal restriction or poor coolant flow", "Too much brake pedal free play", "Bad ignition switch only", "Incorrect tire toe"], "a": 0}, {"cat": "Cooling System", "q": "What is the purpose of a coolant recovery/overflow system?", "opts": ["Allows coolant expansion and return as system cools", "Increases engine compression", "Prevents axle hop", "Changes headlight brightness"], "a": 0}, {"cat": "Data & Diagnostic Comprehension", "q": "The data page says a healthy engine at idle often has 17\u201321 inHg vacuum. An engine shows 10 inHg steady at idle. What is the best interpretation?", "opts": ["This is lower than expected and needs diagnosis", "This is perfect for all engines", "This proves brake rotors are warped", "This proves the battery is fully charged"], "a": 0}, {"cat": "Data & Diagnostic Comprehension", "q": "A 12V headlight circuit has 0.8V drop on the ground side under load. According to the data page target, what does this suggest?", "opts": ["Too much ground-side voltage drop", "Perfect ground circuit", "Thermostat stuck open", "Normal drum brake adjustment"], "a": 0}, {"cat": "Data & Diagnostic Comprehension", "q": "Compression readings are 150, 148, 151, 149, 90, 92, 150, 149 PSI. Using the data page, what is most accurate?", "opts": ["Two adjacent low cylinders suggest a localized mechanical problem", "All cylinders are within 10%", "This is an alternator problem", "This indicates too much brake bias"], "a": 0}, {"cat": "Data & Diagnostic Comprehension", "q": "A charging system reads 13.9V at fast idle with accessories off. Based on the data page, this is generally:", "opts": ["Within normal charging range", "Severely overcharging", "No charge condition", "A brake hydraulic fault"], "a": 0}, {"cat": "Data & Diagnostic Comprehension", "q": "A brake system has a spongy pedal after line replacement. Which data-page principle explains why bleeding matters?", "opts": ["Air compresses; brake fluid does not compress much", "Coolant expands; gasoline evaporates", "Ignition dwell changes cam timing", "Steel wheels conduct electricity"], "a": 0}, {"cat": "Data & Diagnostic Comprehension", "q": "If an electric fan draws 28 amps, which wiring approach is most appropriate?", "opts": ["Use a relay, fuse/circuit protection, correct gauge wire, and solid grounds", "Run it through a tiny dash toggle switch only", "Connect it to the fuel gauge sender", "Use speaker wire because it is flexible"], "a": 0}, {"cat": "Data & Diagnostic Comprehension", "q": "A vehicle has a 7 PSI radiator cap where the data page notes many later systems use 13\u201316 PSI. What is the safest conclusion?", "opts": ["Do not assume wrong; verify the correct cap for that vehicle/radiator", "Always install the highest pressure cap available", "Remove the cap permanently", "This proves a bad alternator"], "a": 0}, {"cat": "Data & Diagnostic Comprehension", "q": "When using a service manual, why should the technician verify year, engine, transmission, and option package?", "opts": ["Specs and procedures can change between similar models", "All cars from 1960\u20132000 use identical specs", "Only paint color matters", "Manuals are never useful"], "a": 0}, {"cat": "Data & Diagnostic Comprehension", "q": "A customer says the car 'overheats' but the gauge is unknown. What is the best technician response?", "opts": ["Verify actual temperature with a reliable tool before replacing parts", "Replace every cooling system part immediately", "Ignore the complaint", "Adjust the brakes"], "a": 0}, {"cat": "Data & Diagnostic Comprehension", "q": "A 1960s car has added EFI, electric fans, and an aftermarket ignition box. What should be reviewed first before diagnosis?", "opts": ["Wiring diagrams, power feeds, grounds, fuses, relays, and install quality", "Only factory radio wiring", "Only tire pressure chart", "Only upholstery code"], "a": 0}];
+
+function showSection(id) {
+  for (const sec of ['applicant','adminLogin','admin']) document.getElementById(sec).classList.add('hidden');
+  document.getElementById(id).classList.remove('hidden');
+}
+
+function buildQuestions() {
+  const box = document.getElementById('questions');
+  let current = '';
+  QUESTIONS.forEach((item, i) => {
+    if (item.cat !== current) {
+      current = item.cat;
+      box.innerHTML += `<h3>${current}</h3>`;
+    }
+    const opts = item.opts.map((o, j) => `
+      <label class="option"><input type="radio" name="q${i}" value="${j}"> ${o}</label>
+    `).join('');
+    box.innerHTML += `<div class="card"><b>${i+1}. ${item.q}</b>${opts}</div>`;
+  });
+}
+
+function submitTest() {
+  const name = document.getElementById('name').value.trim();
+  if (!name) { alert('Please enter applicant name.'); return; }
+  let answers = [];
+  for (let i=0; i<QUESTIONS.length; i++) {
+    const selected = document.querySelector(`input[name="q${i}"]:checked`);
+    if (!selected) { alert(`Please answer question ${i+1}.`); return; }
+    answers.push(Number(selected.value));
+  }
+  const scores = scoreAnswers(answers);
+  const result = {
+    id: Date.now(),
+    submitted: new Date().toLocaleString(),
+    name,
+    date: document.getElementById('date').value,
+    contact: document.getElementById('contact').value,
+    experience: document.getElementById('experience').value,
+    answers,
+    scores
+  };
+  const all = JSON.parse(localStorage.getItem('autoTechResults') || '[]');
+  all.push(result);
+  localStorage.setItem('autoTechResults', JSON.stringify(all));
+  alert(`Test submitted. Overall score: ${scores.overall.percent}%`);
+  document.getElementById('testForm').reset();
+}
+
+function scoreAnswers(answers) {
+  const cats = {};
+  QUESTIONS.forEach((q,i) => {
+    if (!cats[q.cat]) cats[q.cat] = {correct:0,total:0,percent:0};
+    cats[q.cat].total++;
+    if (answers[i] === q.a) cats[q.cat].correct++;
+  });
+  let correct=0,total=QUESTIONS.length;
+  Object.values(cats).forEach(c => { c.percent = Math.round((c.correct/c.total)*100); correct += c.correct; });
+  return { categories: cats, overall: {correct,total,percent:Math.round((correct/total)*100)} };
+}
+
+function adminLogin() {
+  if (document.getElementById('adminPass').value === ADMIN_PASSWORD) {
+    showSection('admin');
+    renderAdmin();
+  } else {
+    alert('Incorrect password.');
+  }
+}
+
+function renderAdmin() {
+  const all = JSON.parse(localStorage.getItem('autoTechResults') || '[]').sort((a,b)=>b.id-a.id);
+  const box = document.getElementById('adminResults');
+  if (!all.length) { box.innerHTML = '<div class="card">No results yet.</div>'; return; }
+  box.innerHTML = all.map(r => {
+    const bars = Object.entries(r.scores.categories).map(([cat,s]) => `
+      <div><b>${cat}</b> — ${s.correct}/${s.total} (${s.percent}%)</div>
+      <div class="progress"><div class="bar" style="width:${s.percent}%">${s.percent}%</div></div>
+    `).join('');
+    return `<div class="card">
+      <h3>${r.name} — Overall ${r.scores.overall.percent}%</h3>
+      <p><b>Submitted:</b> ${r.submitted}<br>
+      <b>Date:</b> ${r.date || ''}<br>
+      <b>Contact:</b> ${r.contact || ''}<br>
+      <b>Experience:</b> ${(r.experience || '').replaceAll('<','&lt;')}</p>
+      ${bars}
+      <details><summary>Question-by-question review</summary>
+      <table><tr><th>#</th><th>Category</th><th>Question</th><th>Applicant</th><th>Correct</th><th>Result</th></tr>
+      ${QUESTIONS.map((q,i)=>`<tr><td>${i+1}</td><td>${q.cat}</td><td>${q.q}</td><td>${q.opts[r.answers[i]]}</td><td>${q.opts[q.a]}</td><td>${r.answers[i]===q.a?'Correct':'Incorrect'}</td></tr>`).join('')}
+      </table></details>
+    </div>`;
+  }).join('');
+}
+
+function exportCSV() {
+  const all = JSON.parse(localStorage.getItem('autoTechResults') || '[]');
+  if (!all.length) { alert('No results to export.'); return; }
+  const cats = [...new Set(QUESTIONS.map(q=>q.cat))];
+  const rows = [['Name','Submitted','Date','Contact','Experience','Overall %',...cats.map(c=>c+' %')]];
+  all.forEach(r => rows.push([r.name,r.submitted,r.date,r.contact,r.experience,r.scores.overall.percent,...cats.map(c=>r.scores.categories[c]?.percent ?? '')]));
+  const csv = rows.map(row => row.map(v => `"${String(v ?? '').replaceAll('"','""')}"`).join(',')).join('\n');
+  const blob = new Blob([csv], {type:'text/csv'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'automotive_technician_test_results.csv'; a.click();
+  URL.revokeObjectURL(url);
+}
+
+function clearResults() {
+  if (confirm('Clear all locally stored results on this device?')) {
+    localStorage.removeItem('autoTechResults');
+    renderAdmin();
+  }
+}
+
+buildQuestions();
+</script>
+</body>
+</html>
